@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brzezinki | HCD Studio </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uevent@2/browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.js"></script>
+
+
+    <style>
+        /* the viewer container must have a defined size */
+        body {
+            padding: 10vh 5vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2em
+        }
+        div {
+            width: 100%;
+            height: 40vh;
+        }
+    </style>
+
+</head>
+<body>
+<div id="viewer1"></div>
+<div id="viewer2"></div>
+<div id="viewer3"></div>
+<div id="viewer4"></div>
+<script>
+    new PhotoSphereViewer.Viewer({
+        container: document.querySelector('#viewer1'),
+        panorama: './c001_360_p.jpg'
+    });
+    new PhotoSphereViewer.Viewer({
+        container: document.querySelector('#viewer2'),
+        panorama: './c002_360_p.jpg'
+    });
+    new PhotoSphereViewer.Viewer({
+        container: document.querySelector('#viewer3'),
+        panorama: './c003_360_p.jpg'
+    });
+    new PhotoSphereViewer.Viewer({
+        container: document.querySelector('#viewer4'),
+        panorama: './c004_360_p.jpg'
+    });
+</script>
+
+</body>
+</html>
